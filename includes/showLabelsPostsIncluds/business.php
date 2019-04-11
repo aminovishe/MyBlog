@@ -6,40 +6,25 @@
     <div class="div-content-widget">
         <div class="row">
             <div class="col-6 d-flex flex-column justify-content-center align-items-start">
-                <img class="w-100" src="pics/Business1.jpg" alt="">
-                <a href="#"><h4>Baseball player running the game field</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsu…</p>
+                <img class="w-100" src="<?= $showLabelsPostsBusiness[0]['image'] ?>">
+                <a href="#"><h4><?= $showLabelsPostsBusiness[0]['title'] ?></h4></a>
+                <p>
+                    <strong><?php echo $showLabelsPostsBusiness[0]['firstName'] . ' ' . $showLabelsPostsBusiness[0]['lastName']; ?></strong>
+                    -
+                    <span class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsBusiness[0]['creationTimestamp'])); ?></span>
+                </p>
+                <p class="text-justify"><?= $showLabelsPostsBusiness[0]['highlight'] ?></p>
             </div>
             <div class="col-6">
-                <div class="col-12 d-flex flex-row justify-content-center align-items-start mt-2">
-                    <img class="w-25" src="pics/Business2.jpg" alt="">
-                    <div class="ml-2 text-left">
-                            <span><a href="#">Baseball player running the game field</a><br><span
-                                        class="badge badge-dark">23/03/2019</span></span>
+                <?php for ($i = 1; $i < 5; $i++) { ?>
+                    <div class="col-12 d-flex flex-row justify-content-start align-items-start mt-2">
+                        <img class="w-25" src="<?= $showLabelsPostsBusiness[$i]['image'] ?>" alt="">
+                        <div class="ml-2 text-left">
+                            <span><a href="#"><?= $showLabelsPostsBusiness[$i]['title'] ?></a><br><span
+                                        class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsBusiness[$i]['creationTimestamp'])); ?></span></span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 d-flex flex-row justify-content-center align-items-start mt-2">
-                    <img class="w-25" src="pics/Business3.jpg" alt="">
-                    <div class="ml-2 text-left">
-                            <span><a href="#">Baseball player running the game field</a><br><span
-                                        class="badge badge-dark">23/03/2019</span></span>
-                    </div>
-                </div>
-                <div class="col-12 d-flex flex-row justify-content-center align-items-start mt-2">
-                    <img class="w-25" src="pics/Business6.jpg" alt="">
-                    <div class="ml-2 text-left">
-                            <span><a href="#">Baseball player running the game field</a><br><span
-                                        class="badge badge-dark">23/03/2019</span></span>
-                    </div>
-                </div>
-                <div class="col-12 d-flex flex-row justify-content-center align-items-start mt-2">
-                    <img class="w-25" src="pics/Business4.jpg" alt="">
-                    <div class="ml-2 text-left">
-                            <span><a href="#">Baseball player running the game field</a><br><span
-                                        class="badge badge-dark">23/03/2019</span></span>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>

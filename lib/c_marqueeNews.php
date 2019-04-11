@@ -6,3 +6,9 @@
  * Time: 11:37 AM
  */
 
+require_once 'cxBDD.php';
+
+$stm = $conn->prepare("SELECT * FROM post ORDER BY post.creationTimestamp DESC LIMIT 5");
+$stm->execute();
+$marqueeNews =$stm->fetchAll(PDO::FETCH_ASSOC);
+?>

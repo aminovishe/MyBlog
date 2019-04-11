@@ -5,26 +5,18 @@
     </div>
     <div class="div-content-widget">
         <div class="row">
-            <div class="col-6">
-                <img height="200" class="w-100" src="pics/technologie2.jpg" alt="">
-                <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-            </div>
-            <div class="col-6">
-                <img height="200" class="w-100"  src="pics/technologie1.jpg" alt="">
-                <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-            </div>
-            <div class="col-6">
-                <img height="200" class="w-100" src="pics/technologie3.jpg" alt="">
-                <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-            </div>
-            <div class="col-6">
-                <img height="200" class="w-100" src="pics/technologie4.jpg" alt="">
-                <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-            </div>
+
+            <?php foreach ($showLabelsPostsTechnology as $key => $value) { ?>
+                <div class="col-6">
+                    <img height="200" class="w-100" src="<?= $value['image'] ?>" alt="">
+                    <a href="#"><h4><?= $value['title'] ?></h4></a>
+                    <p><strong><?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong> - <span
+                                class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($value['creationTimestamp'])); ?></span>
+                    </p>
+                    <p class="text-justify"><?= $value['highlight'] ?></p>
+                </div>
+            <?php } ?>
+
         </div>
     </div>
 </div>

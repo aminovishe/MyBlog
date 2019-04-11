@@ -5,21 +5,16 @@
     </div>
     <div class="div-content-widget">
         <div class="row">
-            <div class="col-4">
-                <img height="200" src="pics/nature1.jpg" alt="">
-                <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-            </div>
-            <div class="col-4">
-                <img height="200" src="pics/nature2.jpg" alt="">
-                <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-            </div>
-            <div class="col-4">
-                <img height="200" src="pics/nature3.jpg" alt="">
-                <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
-            </div>
+            <?php foreach ($showLabelsPostsNature as $key => $value) { ?>
+                <div class="col-4">
+                    <img class="w-100" height="200" src="<?= $value['image'] ?>" alt="">
+                    <a href="#"><h4><?= $value['title'] ?></h4></a>
+                    <p><strong><?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong> - <span
+                                class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($value['creationTimestamp'])); ?></span>
+                    </p>
+                    <p class="text-justify"><?= $value['highlight'] ?></p>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>

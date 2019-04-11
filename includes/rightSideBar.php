@@ -1,3 +1,4 @@
+<?php require_once 'lib/c_rightSideBar.php'?>
 <div class="col-4 right-side-bar">
     <div class="show-widget social-widget">
         <div class="div-title-widget">
@@ -5,9 +6,9 @@
         </div>
         <div class="div-content-widget">
             <a class="one-social-widget twitter" href="https://twitter.com/" target="_blank"><i
-                    class="fab fa-twitter-square"></i></a>
+                        class="fab fa-twitter-square"></i></a>
             <a class="one-social-widget google" href="https://plus.google.com/" target="_blank"><i
-                    class="fab fa-google-plus-square"></i></a>
+                        class="fab fa-google-plus-square"></i></a>
             <a class="one-social-widget facebook" href="https://www.facebook.com/amin7hadrich"
                target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a class="one-social-widget instagram" href="https://www.instagram.com/amin7hadrich/"
@@ -24,19 +25,22 @@
             <div class="d-flex flex-row justify-content-center align-items-start mt-2">
                 <img src="pics/sport2.jpg" alt="">
                 <div class="ml-2 text-left">
-                    <span>Baseball player running the game field<br><span class="badge badge-dark">23/03/2019</span></span>
+                    <span>Baseball player running the game field<br><span
+                                class="badge badge-dark">23/03/2019</span></span>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-center align-items-start mt-2">
                 <img src="pics/Business1.jpg" alt="">
                 <div class="ml-2 text-left">
-                    <span>Baseball player running the game field<br><span class="badge badge-dark">23/03/2019</span></span>
+                    <span>Baseball player running the game field<br><span
+                                class="badge badge-dark">23/03/2019</span></span>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-center align-items-start mt-2">
                 <img src="pics/music2.jpg" alt="">
                 <div class="ml-2 text-left">
-                    <span>Baseball player running the game field<br><span class="badge badge-dark">23/03/2019</span></span>
+                    <span>Baseball player running the game field<br><span
+                                class="badge badge-dark">23/03/2019</span></span>
                 </div>
             </div>
         </div>
@@ -59,7 +63,7 @@
                          data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                         <blockquote cite="https://www.facebook.com/jaaw.chi5a.tn/"
                                     class="fb-xfbml-parse-ignore"><a
-                                href="https://www.facebook.com/jaaw.chi5a.tn/">Jaaw#Chi5a.Tn</a>
+                                    href="https://www.facebook.com/jaaw.chi5a.tn/">Jaaw#Chi5a.Tn</a>
                         </blockquote>
                     </div>
                 </div>
@@ -73,26 +77,36 @@
         <div class="div-content-widget">
             <div class="widget-content">
                 <ul class="list-group">
-                    <a href="#"><li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="#">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                             Business
-                            <span class="badge badge-dark badge-pill">14</span>
-                        </li></a>
-                    <a href="#"><li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsBusiness?></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                             Music
-                            <span class="badge badge-dark badge-pill">2</span>
-                        </li></a>
-                    <a href="#"><li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsMusic?></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                             Sport
-                            <span class="badge badge-dark badge-pill">25</span>
-                        </li></a>
-                    <a href="#"><li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsNature?></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                             Nature
-                            <span class="badge badge-dark badge-pill">11</span>
-                        </li></a>
-                    <a href="#"><li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsSport?></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                             Technology
-                            <span class="badge badge-dark badge-pill">7</span>
-                        </li></a>
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsTechnology?></span>
+                        </li>
+                    </a>
                 </ul>
             </div>
         </div>

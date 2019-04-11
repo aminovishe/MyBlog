@@ -6,25 +6,27 @@
         </div>
         <div class="div-content-widget">
             <div class="row">
+
                 <div class="col-12">
-                    <img height="200" class="w-100" src="pics/music1.jpg" alt="">
-                    <a href="#"><h4>A Museum as an Ecosystem</h4></a>
-                    <p><strong>Amin HADRICH</strong> - <span class="badge badge-dark">23/03/2019</span></p>
+                    <img height="200" class="w-100" src="<?= $showLabelsPostsMusic[0]['image'] ?>">
+                    <a href="#"><h4><?= $showLabelsPostsMusic[0]['title'] ?></h4></a>
+                    <p>
+                        <strong><?php echo $showLabelsPostsMusic[0]['firstName'] . ' ' . $showLabelsPostsMusic[0]['lastName']; ?></strong>
+                        -
+                        <span class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsMusic[0]['creationTimestamp'])); ?></span>
+                    </p>
+                    <p class="text-justify"><?= $showLabelsPostsMusic[0]['highlight'] ?></p>
                 </div>
-                <div class="col-12 d-flex flex-row justify-content-center align-items-start mt-2">
-                    <img class="w-25" src="pics/music2.jpg" alt="">
-                    <div class="ml-2 text-left">
-                            <span><a href="#">Baseball player running the game field</a><br><span
-                                    class="badge badge-dark">23/03/2019</span></span>
+
+                <?php for ($i = 1; $i < 3; $i++) { ?>
+                    <div class="col-12 d-flex flex-row justify-content-start align-items-start mt-2">
+                        <img class="w-25" src="<?= $showLabelsPostsMusic[$i]['image']?>">
+                        <div class="ml-2 text-left">
+                            <span><a href="#"><?= $showLabelsPostsMusic[$i]['title'] ?></a><br><span
+                                        class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsMusic[$i]['creationTimestamp'])); ?></span></span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 d-flex flex-row justify-content-center align-items-start mt-2">
-                    <img class="w-25" src="pics/music3.jpg" alt="">
-                    <div class="ml-2 text-left">
-                            <span><a href="#">Baseball player running the game field</a><br><span
-                                    class="badge badge-dark">23/03/2019</span></span>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
