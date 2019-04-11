@@ -14,7 +14,7 @@
                     <p>
                         <strong><?php echo $showLabelsPostsSport[0]['firstName'] . ' ' . $showLabelsPostsSport[0]['lastName']; ?></strong>
                         -
-                        <span class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsSport[0]['creationTimestamp'])); ?></span>
+                        <span class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($showLabelsPostsSport[0]['creationTimestamp'])); ?></span>
                     </p>
                     <p class="text-justify"><?= $showLabelsPostsSport[0]['highlight'] ?></p>
                 </div>
@@ -24,7 +24,7 @@
                         <img class="w-25" src="<?= $showLabelsPostsSport[$i]['image']?>" alt="">
                         <div class="ml-2 text-left">
                             <span><a href="#"><?= $showLabelsPostsSport[$i]['title'] ?></a><br><span
-                                        class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsSport[$i]['creationTimestamp'])); ?></span></span>
+                                        class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($showLabelsPostsSport[$i]['creationTimestamp'])); ?></span></span>
                         </div>
                     </div>
                 <?php } ?>

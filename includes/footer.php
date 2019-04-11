@@ -12,7 +12,7 @@
                             <img class="w-100" height="200" src="<?= $value['image'] ?>" alt="">
                             <a href="#"><h4><?= $value['title'] ?></h4></a>
                             <p><strong><?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong> - <span
-                                        class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($value['creationTimestamp'])); ?></span>
+                                        class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($value['creationTimestamp'])); ?></span>
                             </p>
                             <p class="text-justify"><?= $value['highlight'] ?></p>
                         </div>

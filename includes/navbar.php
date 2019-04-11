@@ -8,6 +8,9 @@
                 <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item mr-2">
+                <a class="nav-link" href="#">All Posts</a>
+            </li>
+            <li class="nav-item mr-2">
                 <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item mr-2">

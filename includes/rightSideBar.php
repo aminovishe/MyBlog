@@ -92,13 +92,13 @@
                     <a href="#">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Sport
-                            <span class="badge badge-dark badge-pill"><?=$numberPostsNature?></span>
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsSport?></span>
                         </li>
                     </a>
                     <a href="#">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Nature
-                            <span class="badge badge-dark badge-pill"><?=$numberPostsSport?></span>
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsNature?></span>
                         </li>
                     </a>
                     <a href="#">

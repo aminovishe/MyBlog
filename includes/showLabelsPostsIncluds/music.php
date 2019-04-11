@@ -13,7 +13,7 @@
                     <p>
                         <strong><?php echo $showLabelsPostsMusic[0]['firstName'] . ' ' . $showLabelsPostsMusic[0]['lastName']; ?></strong>
                         -
-                        <span class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsMusic[0]['creationTimestamp'])); ?></span>
+                        <span class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($showLabelsPostsMusic[0]['creationTimestamp'])); ?></span>
                     </p>
                     <p class="text-justify"><?= $showLabelsPostsMusic[0]['highlight'] ?></p>
                 </div>
@@ -23,7 +23,7 @@
                         <img class="w-25" src="<?= $showLabelsPostsMusic[$i]['image']?>">
                         <div class="ml-2 text-left">
                             <span><a href="#"><?= $showLabelsPostsMusic[$i]['title'] ?></a><br><span
-                                        class="badge badge-dark"><?= date('d-m-Y h:i:s', strtotime($showLabelsPostsMusic[$i]['creationTimestamp'])); ?></span></span>
+                                        class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($showLabelsPostsMusic[$i]['creationTimestamp'])); ?></span></span>
                         </div>
                     </div>
                 <?php } ?>
