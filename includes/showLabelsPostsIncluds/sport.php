@@ -10,7 +10,7 @@
 
                 <div class="col-12">
                     <img height="200" class="w-100" src="<?= $showLabelsPostsSport[0]['image'] ?>" alt="">
-                    <a href="#"><h4><?= $showLabelsPostsSport[0]['title'] ?></h4></a>
+                    <a href="onePost.php?id=<?= $showLabelsPostsSport[0]['id'] ?>"><h4><?= $showLabelsPostsSport[0]['title'] ?></h4></a>
                     <p>
                         <strong><?php echo $showLabelsPostsSport[0]['firstName'] . ' ' . $showLabelsPostsSport[0]['lastName']; ?></strong>
                         -
@@ -23,7 +23,7 @@
                     <div class="col-12 d-flex flex-row justify-content-start align-items-start mt-2">
                         <img class="w-25" src="<?= $showLabelsPostsSport[$i]['image']?>" alt="">
                         <div class="ml-2 text-left">
-                            <span><a href="#"><?= $showLabelsPostsSport[$i]['title'] ?></a><br><span
+                            <span><a href="onePost.php?id=<?= $showLabelsPostsSport[$i]['id'] ?>"><?= $showLabelsPostsSport[$i]['title'] ?></a><br><span
                                         class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($showLabelsPostsSport[$i]['creationTimestamp'])); ?></span></span>
                         </div>
                     </div>

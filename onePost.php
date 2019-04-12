@@ -43,5 +43,6 @@ require_once 'lib/c_onePost.php';
 <script type="text/javascript" src="js/script.js"></script>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.2"></script>
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 </html>

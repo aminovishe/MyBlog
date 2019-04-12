@@ -9,7 +9,7 @@
             <?php foreach ($showLabelsPostsTechnology as $key => $value) { ?>
                 <div class="col-6">
                     <img height="200" class="w-100" src="<?= $value['image'] ?>" alt="">
-                    <a href="#"><h4><?= $value['title'] ?></h4></a>
+                    <a href="onePost.php?id=<?= $value['id'] ?>"><h4><?= $value['title'] ?></h4></a>
                     <p><strong><?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong> - <span
                                 class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($value['creationTimestamp'])); ?></span>
                     </p>
