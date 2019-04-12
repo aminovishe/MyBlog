@@ -2,11 +2,17 @@
     box-sizing: border-box;
     font-family: 'ZCOOL XiaoWei', serif;
 }
-
+.w-35{
+    width: 35%;
+}
 a:hover {
     text-decoration: none;
 }
-
+.separation-posts{
+    border: 1px solid #721c24;
+    width: 80%;
+    margin: auto;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -49,7 +55,12 @@ marquee {
 marquee * {
     vertical-align: middle;
 }
-
+marquee a{
+    color: black;
+}
+marquee a:hover{
+    color: #1b1e21;
+}
 marquee img {
     height: 50px;
 }
@@ -61,7 +72,7 @@ marquee img {
 
 .big-div {
     padding: 0;
-    width: 80%;
+    width: 90%;
 }
 
 .oneLabelPost [class*="col"] {
@@ -72,9 +83,11 @@ marquee img {
     padding: 0 15px;
 
 }
-.oneLabelPost .card-text-title{
+
+.oneLabelPost .card-text-title {
     font-size: 1.2rem !important;
 }
+
 .oneLabelPost .card-text {
     color: black;
 }
@@ -98,7 +111,8 @@ marquee img {
     font-size: 1.2em;
     font-weight: bold;
 }
-.oneLabelPostLabel{
+
+.oneLabelPostLabel {
     top: 1.2rem;
     left: 1.2rem;
     padding: 10px;
@@ -106,6 +120,7 @@ marquee img {
     color: white;
     border-radius: 5px;
 }
+
 .row-posts-widgets {
     margin: 20px 0;
 }
@@ -246,8 +261,8 @@ marquee img {
     border-radius: 4px;
     margin: 30px;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
     transition: background-color .3s;
     z-index: 1000;
     display: flex;
@@ -256,13 +271,72 @@ marquee img {
     align-content: center;
     font-size: 1.5rem;
 }
+
 #btn-to-top:hover {
     cursor: pointer;
     background-color: #333;
 }
+
 #btn-to-top:active {
     background-color: #555;
 }
-.hide-btn-to-top{
+
+.hide-btn-to-top {
     display: none !important;
+}
+
+/* one post */
+.div-one-label .card{
+    width: 100%;
+    height: 500px;
+    background: no-repeat center;
+    background-size: cover;
+}
+.div-one-label .card .card-post-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.div-one-label .card .card-post-image h1{
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 3px 2px 0px rgba(0,0,0,0.51);
+}
+.div-one-label .card .card-post-image > .badge{
+    font-size: 1.1rem !important;
+}
+.div-one-label .one-lable-highlight{
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-indent: 1.5em;
+}
+.between-highlight-content{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+.between-highlight-content [class*="col"]{
+    padding: 0 !important;
+}
+
+.related-post{
+    padding: 5px 8px;
+    margin: 20px 0 10px 15px;
+    background-color: #721c24;
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    color: white;
+}
+
+.related-post i{
+    position: absolute;
+    top: -17px;
+    left: -10px;
+    color: black !important;
+}
+.one-lable-content{
+    text-indent: 1.5em;
 }

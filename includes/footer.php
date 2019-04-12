@@ -1,4 +1,7 @@
-<?php require_once 'lib/c_footerRandomPosts.php' ?>
+<?php
+    require_once 'lib/c_randomPosts.php';
+    $randomPosts = randomPosts(-1,3);
+?>
 <div class="row">
     <div class="col-12">
         <div class="show-widget">
@@ -7,10 +10,10 @@
             </div>
             <div class="div-content-widget">
                 <div class="row">
-                    <?php foreach ($TabRandPosts as $key => $value) { ?>
+                    <?php foreach ($randomPosts as $key => $value) { ?>
                         <div class="col-4">
                             <img class="w-100" height="200" src="<?= $value['image'] ?>" alt="">
-                            <a href="#"><h4><?= $value['title'] ?></h4></a>
+                            <a href="onePost.php?id=<?= $value['id'] ?>"><h4><?= $value['title'] ?></h4></a>
                             <p><strong><?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong> - <span
                                         class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($value['creationTimestamp'])); ?></span>
                             </p>
