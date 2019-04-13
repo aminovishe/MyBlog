@@ -1,7 +1,7 @@
 <div class="show-widget">
     <div class="div-title-widget d-flex flex-row justify-content-between align-items-center">
         <p class="m-0 widget-title d-inline-block">NATURE</p>
-        <a href="#">View all <i class="fas fa-chevron-right"></i></a>
+        <a href="allPosts.php?idLabel=4">View all <i class="fas fa-chevron-right"></i></a>
     </div>
     <div class="div-content-widget">
         <div class="row">

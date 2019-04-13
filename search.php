@@ -5,9 +5,8 @@
     <meta name="author" content="Mohamed Amin Hadrich">
     <meta name="description" content="this is a advance cms system developed with udemy">
     <link rel="shortcut icon" href="pics/logo.ico" type="image/x-icon">
-    <title>AmiBlog</title>
+    <title>Search - AmiBlog</title>
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style/bootstrap.css">
@@ -27,9 +26,8 @@
 <div class="container big-div mt-3 mb-3">
     <?php require_once 'includes/navbar.php' ?>
     <?php require_once 'includes/marqueeNews.php' ?>
-    <?php require_once 'includes/oneLabelPost.php' ?>
     <div class="row row-posts-widgets">
-        <?php require_once 'includes/showLabelsPosts.php' ?>
+        <?php require_once 'includes/divSearch.php' ?>
         <?php require_once 'includes/rightSideBar.php' ?>
     </div>
 </div>

@@ -1,0 +1,54 @@
+.sidebar-menu .header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.treeview > .menu-open > .treeview-menu-item-active > a {
+    color: #00A65A !important;
+}
+
+.w-10{
+    width: 5% !important;
+}
+
+.w-90{
+    width: 95% !important;
+}
+.verticalWordTextarea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.verticalWord{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.verticalWord{
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    color: white;
+}
+.highlightEditor{
+    border: 2px solid #3C8DBC;
+}
+.contentEditor{
+    border: 2px solid #2B3B92;
+}
+.bg-purple{
+    background-color: #DFA8E4 !important;
+}
+.bg-dark{
+    background-color: #222D32 !important;
+}
+.showOnePostAdmin{
+    margin: 10px 15px;
+}
+.separation-posts {
+    border: 1px solid #2B3B92;
+    width: 80%;
+    margin: auto;
+}

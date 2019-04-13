@@ -11,4 +11,6 @@ $(document).ready(function() {
         e.preventDefault();
         $('html, body').animate({scrollTop:0}, '300');
     });
+    var elfsightBtn = $('.eapps-social-share-buttons-inner a[href*="a"]');
+    elfsightBtn.removeAttr("style");
 });

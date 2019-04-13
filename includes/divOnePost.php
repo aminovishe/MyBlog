@@ -2,7 +2,7 @@
     <div class="div-title-widget d-flex flex-row justify-content-between align-items-center mb-3">
         <p class="m-0 widget-title d-inline-block"><?= $tabOnePost['name'] ?></p>
     </div>
-    <div class="row d-flex flex-row justify-content-around align-items-center">
+    <div class="div-previous-next row d-flex flex-row justify-content-around align-items-center">
         <?php if ($idPreviousPost != -1) { ?>
             <div class="col-6 d-flex flex-column justify-content-center align-items-center">
                 <a class="btn btn-link" href="onePost.php?id=<?= $idPreviousPost ?>"><i class="fas fa-arrow-left"></i>
@@ -42,14 +42,14 @@
                 <p><?= $tabOnePost['highlight'] ?></p>
             </div>
             <div class="mt-3 mb-3 between-highlight-content p-2">
-                <div class="related-post"><i class="fas fa-map-marker-alt fa-2x"></i>Related Post</div>
+                <div class="related-post"><i class="fas fa-map-marker-alt fa-2x"></i><em style="color: white">Related Post</em></div>
                 <div class="d-flex flex-row justify-content-center align-items-start">
                     <?php foreach ($tabRelatedPosts as $key => $value) { ?>
                         <div class="col-6 d-flex flex-row justify-content-start align-items-start">
                             <div class="w-35"
                                  style="background: url('<?= $value['image'] ?>') center no-repeat;height: 100px;background-size: cover"></div>
-                            <div class="ml-2 text-left">
-                    <span><?= $value['title'] ?><br><span
+                            <div class="w-65 ml-2 text-left">
+                    <span><a class="title-related-post" href="onePost.php?id=<?= $value['id'] ?>"><?= $value['title'] ?></a><br><span
                                 class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($value['creationTimestamp'])); ?></span></span>
                             </div>
                         </div>

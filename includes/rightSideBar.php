@@ -23,22 +23,25 @@
         </div>
         <div class="div-content-widget">
             <div class="d-flex flex-row justify-content-center align-items-start mt-2">
-                <img src="https://static1.squarespace.com/static/5707c9364c2f85d0ea64d6ee/5713a9f6a3360cab667a8c15/5818642be6f2e10d0e6b7b4b/1497078449062/-JULA1609241200-LOCALFR1H-EverPhotoShoot-104_original.jpg" alt="">
-                <div class="ml-2 text-left">
+                <div class="w-35"
+                     style="background: url('https://static1.squarespace.com/static/5707c9364c2f85d0ea64d6ee/5713a9f6a3360cab667a8c15/5818642be6f2e10d0e6b7b4b/1497078449062/-JULA1609241200-LOCALFR1H-EverPhotoShoot-104_original.jpg') center no-repeat;height: 100px;background-size: cover"></div>
+                <div class="w-65 ml-2 text-left">
                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><span
                                 class="badge badge-dark">23/03/2019</span></span>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-center align-items-start mt-2">
-                <img src="https://www.zaniaclearning.com/static/zspa/img/membership.png" alt="">
-                <div class="ml-2 text-left">
+                <div class="w-35"
+                     style="background: url('https://www.zaniaclearning.com/static/zspa/img/membership.png') center no-repeat;height: 100px;background-size: cover"></div>
+                <div class="w-65 ml-2 text-left">
                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><span
                                 class="badge badge-dark">23/03/2019</span></span>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-center align-items-start mt-2">
-                <img src="https://www.rueducommerce.fr/medias/b0ada96b3a043fcb8fe6ba4d51918d91/p_580x580/carrera-20064104-01.jpg" alt="">
-                <div class="ml-2 text-left">
+                <div class="w-35"
+                     style="background: url('https://www.rueducommerce.fr/medias/b0ada96b3a043fcb8fe6ba4d51918d91/p_580x580/carrera-20064104-01.jpg') center no-repeat;height: 100px;background-size: cover"></div>
+                <div class="w-65 ml-2 text-left">
                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><span
                                 class="badge badge-dark">23/03/2019</span></span>
                 </div>
@@ -91,14 +94,14 @@
                     </a>
                     <a href="allPosts.php?idLabel=3">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Sport
-                            <span class="badge badge-dark badge-pill"><?=$numberPostsSport?></span>
+                            Nature
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsNature?></span>
                         </li>
                     </a>
                     <a href="allPosts.php?idLabel=4">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Nature
-                            <span class="badge badge-dark badge-pill"><?=$numberPostsNature?></span>
+                            Sport
+                            <span class="badge badge-dark badge-pill"><?=$numberPostsSport?></span>
                         </li>
                     </a>
                     <a href="allPosts.php?idLabel=5">
@@ -111,4 +114,5 @@
             </div>
         </div>
     </div>
+    <?php require_once 'weatherApi.php'?>
 </div>

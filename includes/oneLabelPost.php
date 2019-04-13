@@ -2,7 +2,7 @@
 <div class="oneLabelPost">
     <div class="row">
         <div class="col-4">
-            <a href="#">
+            <a href="onePost.php?id=<?= $oneLabelPostBusiness['id'] ?>">
                 <div class="card h-100 position-relative">
                     <img class="card-img img-fluid h-100" src="<?= $oneLabelPostBusiness['image'] ?>" alt="Card image">
                     <span class="oneLabelPostLabel position-absolute">Business</span>
@@ -16,7 +16,7 @@
             </a>
         </div>
         <div class="col-4">
-            <a href="#">
+            <a href="onePost.php?id=<?= $oneLabelPostMusic['id'] ?>">
                 <div class="card h-100 position-relative">
                     <img class="card-img img-fluid h-100" src="<?= $oneLabelPostMusic['image'] ?>" alt="Card image">
                     <span class="oneLabelPostLabel position-absolute">Music</span>
@@ -37,7 +37,7 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <a href="#">
+            <a href="onePost.php?id=<?= $oneLabelPostNature['id'] ?>">
                 <div class="card h-100 position-relative">
                     <img class="card-img img-fluid h-100" src="<?= $oneLabelPostNature['image'] ?>" alt="Card image">
                     <span class="oneLabelPostLabel position-absolute">Nature</span>
@@ -51,7 +51,7 @@
             </a>
         </div>
         <div class="col-4">
-            <a href="#">
+            <a href="onePost.php?id=<?= $oneLabelPostSport['id'] ?>">
                 <div class="card h-100 position-relative">
                     <img class="card-img img-fluid h-100" src="<?= $oneLabelPostSport['image'] ?>" alt="Card image">
                     <span class="oneLabelPostLabel position-absolute">Sport</span>
@@ -65,7 +65,7 @@
             </a>
         </div>
         <div class="col-4">
-            <a href="#">
+            <a href="onePost.php?id=<?= $oneLabelPostTechnology['id'] ?>">
                 <div class="card h-100 position-relative">
                     <img class="card-img img-fluid h-100" src="<?= $oneLabelPostTechnology['image'] ?>"
                          alt="Card image">
