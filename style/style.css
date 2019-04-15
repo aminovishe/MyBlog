@@ -2,15 +2,31 @@
     box-sizing: border-box;
     font-family: 'ZCOOL XiaoWei', serif;
 }
-
+.hide{
+    display: none !important;
+}
 .w-35 {
     width: 35% !important;
 }
-
+.w-45{
+    width: 45% !important;
+}
 .w-65 {
     width: 65% !important;
 }
+.w-10{
+    width: 10% !important;
+}
 
+.w-15{
+    width: 15% !important;
+}
+.w-85{
+    width: 85% !important;
+}
+.w-90{
+    width: 90% !important;
+}
 a:hover {
     text-decoration: none !important;
 }
@@ -27,8 +43,7 @@ html, body {
 }
 
 body {
-    background: url("../pics/bg3.jpg") fixed no-repeat;
-    background-size: cover;
+    background: url("../pics/bg1.jpg") fixed ;
 }
 
 #logo_amiblog {
@@ -146,6 +161,10 @@ marquee img {
     margin-bottom: 10px;
 }
 
+.div-title-widget .view-all{
+    color: white;
+}
+
 .widget-title {
     padding: 6px 13px;
     background-color: white;
@@ -181,13 +200,11 @@ marquee img {
 }
 
 /*popular posts widget*/
-.popular-post-widget img {
-    width: 30%;
-}
 
-.popular-post-widget .div-content-widget {
+.popular-post-widget .div-content-widget * {
     color: white;
 }
+
 
 /*follow-by-email-widget*/
 .follow-by-email-widget {
@@ -243,7 +260,7 @@ marquee img {
 .show-labels-posts .div-content-widget {
     color: white;
 }
-.show-labels-posts .div-content-widget img{
+.show-labels-posts .div-content-widget .image{
     -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 3px 17px 50px -23px rgba(255,255,255,0.11);
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 3px 17px 50px -23px rgba(255,255,255,0.11);
 }
@@ -395,4 +412,267 @@ marquee img {
 
 .one-lable-content {
     text-indent: 1.5em;
+}
+/* comment */
+.inputComment{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000;
+    box-shadow: inset 4px 4px 15px 0px #000000;
+}
+.divShowComment, .divAddComment{
+    margin: 0;
+}
+
+.divAddComment .like input[type="radio"]{
+    display:none;
+}
+
+.divAddComment .like input[type="radio"] + label
+{
+    background: url("../pics/like0.PNG") center;
+    background-size: cover;
+    height: 23px;
+    width: 60px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.divAddComment .like input[type="radio"]:checked + label
+{
+    background: url("../pics/like1.PNG") center;
+    background-size: cover;
+    height: 23px;
+    width: 60px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+}
+
+.divAddComment .likeNot input[type="radio"]{
+    display:none;
+}
+
+.divAddComment .likeNot input[type="radio"] + label
+{
+    background: url("../pics/likeNot0.png") center;
+    background-size: cover;
+    height: 23px;
+    width: 60px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.divAddComment .likeNot input[type="radio"]:checked + label
+{
+    background: url("../pics/likeNot1.png") center;
+    background-size: cover;
+    height: 23px;
+    width: 60px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+}
+
+.divAddComment .boy input[type="radio"]{
+    display:none;
+}
+
+.divAddComment .boy input[type="radio"] + label
+{
+    background: url("../pics/boyForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    margin: 0;
+}
+
+.divAddComment .boy input[type="radio"]:checked + label
+{
+    background: url("../pics/boyForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    margin: 0;
+}
+
+.divAddComment .girl input[type="radio"]{
+    display:none;
+}
+
+.divAddComment .girl input[type="radio"] + label
+{
+    background: url("../pics/girlForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    margin: 0;
+}
+
+.divAddComment .girl input[type="radio"]:checked + label
+{
+    background: url("../pics/girlForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    margin: 0;
+}
+
+.divAddComment .men input[type="radio"]{
+    display:none;
+}
+
+.divAddComment .men input[type="radio"] + label
+{
+    background: url("../pics/menForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    margin: 0;
+}
+
+.divAddComment .men input[type="radio"]:checked + label
+{
+    background: url("../pics/menForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    margin: 0;
+}
+
+.divAddComment .women input[type="radio"]{
+    display:none;
+}
+
+.divAddComment .women input[type="radio"] + label
+{
+    background: url("../pics/womenForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    margin: 0;
+}
+
+.divAddComment .women input[type="radio"]:checked + label
+{
+    background: url("../pics/womenForm.png") center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    box-shadow: 0px 0px 8px 4px rgba(102,102,102,0.69);
+    margin: 0;
+}
+
+@import "http://fonts.googleapis.com/css?family=Arvo";
+
+.button6{
+    width:30%;
+    height:40px;
+    border:none;
+    outline:none;
+    box-shadow:-5px 5px 5px 0 #8aa7fb;
+    margin-top:20px;
+    color:#fff;
+    font-size:14px;
+    text-shadow:0 1px rgba(0,0,0,0.4);
+    background-color:#5882FA;
+    border-radius:3px;
+    font-weight:700
+}
+.button6:hover{
+    background-color:#2E64FE;
+    cursor:pointer
+}
+.button6:active{
+    margin-left:-5px;
+    margin-bottom:-5px;
+    padding-top:2px;
+    box-shadow:none
+}
+#errorComment{
+
+
+}
+
+/* show comments */
+.showOneComment{
+    background-color: #F5F6F8;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #bdbdbd, 3px 17px 50px -23px rgba(255,255,255,0.11);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #bdbdbd, 3px 17px 50px -23px rgba(255,255,255,0.11);
+}
+.nickName{
+    margin: 0;
+    font-size: 1.2em;
+    color: #005cbf;
+}
+
+/* Contact */
+.divContact div:nth-of-type(2) p {
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.formContact{
+    width: 70%;
+    margin: auto;
+}
+.formContact form{
+    width: 100%;
+}
+
+.formContact form input, .formContact form textarea{
+    color: black;
+}
+
+.formContact form input:focus, .formContact form textarea:focus {
+    color: black;
+}
+
+
+#btnModalRegister{
+    color: #FFC107!important;
+    cursor: pointer;
+}
+#btnModalRegister:hover{
+    color: #fff415!important;
+}
+.divContact .modal-lg {
+    max-width: 40% !important;
+}
+.divContact .modal-lg .modal-header{
+    background-image: linear-gradient(to right bottom, #1d1e21, #272128, #362226, #3e271d, #393115);
+}
+.divContact .modal-lg .modal-body{
+    background: url("../pics/bg1.jpg") fixed ;
+}
+.divContact .modal-lg .modal-footer{
+    background-image: linear-gradient(to left top, #1d1e21, #272128, #362226, #3e271d, #393115);
 }

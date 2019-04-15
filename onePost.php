@@ -1,6 +1,7 @@
 <?php
 require_once 'lib/c_randomPosts.php';
 require_once 'lib/c_onePost.php';
+require_once 'lib/c_showComment.php';
 ?>
 <!DOCTYPE html>
 <html>

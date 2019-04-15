@@ -4,12 +4,19 @@
         <div class="col-4">
             <a href="onePost.php?id=<?= $oneLabelPostBusiness['id'] ?>">
                 <div class="card h-100 position-relative">
-                    <img class="card-img img-fluid h-100" src="<?= $oneLabelPostBusiness['image'] ?>" alt="Card image">
+                    <div class="card-img img-fluid" style="background: url('admin/img/upload_img/<?= $oneLabelPostBusiness['image'] ?>') center no-repeat; background-size: cover;height: 300px;" alt="Card image"></div>
                     <span class="oneLabelPostLabel position-absolute">Business</span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end m-3">
                         <p class="card-text">
                             <span class="card-text-title"><?= $oneLabelPostBusiness['title'] ?></span><br>
-                            <small class="small"><?= date('d-m-Y h:i:s a', strtotime($oneLabelPostBusiness['creationTimestamp'])); ?></small>
+                                <small class="small">
+                                    <span class="badge badge-dark">Published in : <?= $oneLabelPostBusiness['creationTimestamp'] ?></span>
+                                    <?php
+                                    if (!is_null($oneLabelPostBusiness['updateTimestamp']) ){
+                                        ?> | <span class="badge badge-info">Updated in : <?= $oneLabelPostBusiness['updateTimestamp'] ?></span><?php
+                                    }
+                                    ?>
+                            </small>
                         </p>
                     </div>
                 </div>
@@ -18,12 +25,19 @@
         <div class="col-4">
             <a href="onePost.php?id=<?= $oneLabelPostMusic['id'] ?>">
                 <div class="card h-100 position-relative">
-                    <img class="card-img img-fluid h-100" src="<?= $oneLabelPostMusic['image'] ?>" alt="Card image">
+                    <div class="card-img img-fluid" style="background: url('admin/img/upload_img/<?= $oneLabelPostMusic['image'] ?>') center no-repeat; background-size: cover;height: 300px;" alt="Card image"></div>
                     <span class="oneLabelPostLabel position-absolute">Music</span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end m-3">
                         <p class="card-text">
                             <span class="card-text-title"><?= $oneLabelPostMusic['title'] ?></span><br>
-                            <small class="small"><?= date('d-m-Y h:i:s a', strtotime($oneLabelPostMusic['creationTimestamp'])); ?></small>
+                            <small class="small">
+                                <span class="badge badge-dark">Published in : <?= $oneLabelPostMusic['creationTimestamp'] ?></span>
+                                <?php
+                                if (!is_null($oneLabelPostMusic['updateTimestamp']) ){
+                                    ?> | <span class="badge badge-info">Updated in : <?= $oneLabelPostMusic['updateTimestamp'] ?></span><?php
+                                }
+                                ?>
+                            </small>
                         </p>
                     </div>
                 </div>
@@ -31,7 +45,7 @@
         </div>
         <div class="col-4">
             <div class="card h-100 position-relative">
-                <img class="card-img img-fluid h-100" src="pics/bannerAd.jpg" alt="Card image">
+                <div class="card-img img-fluid" style="background: url('pics/bannerAd.jpg') center no-repeat; background-size: cover;height: 300px;" alt="Card image"></div>
             </div>
         </div>
     </div>
@@ -39,12 +53,19 @@
         <div class="col-4">
             <a href="onePost.php?id=<?= $oneLabelPostNature['id'] ?>">
                 <div class="card h-100 position-relative">
-                    <img class="card-img img-fluid h-100" src="<?= $oneLabelPostNature['image'] ?>" alt="Card image">
+                    <div class="card-img img-fluid" style="background: url('admin/img/upload_img/<?= $oneLabelPostNature['image'] ?>') center no-repeat; background-size: cover;height: 300px;" alt="Card image"></div>
                     <span class="oneLabelPostLabel position-absolute">Nature</span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end m-3">
                         <p class="card-text">
                             <span class="card-text-title"><?= $oneLabelPostNature['title'] ?></span><br>
-                            <small class="small"><?= date('d-m-Y h:i:s a', strtotime($oneLabelPostNature['creationTimestamp'])); ?></small>
+                            <small class="small">
+                                <span class="badge badge-dark">Published in : <?= $oneLabelPostNature['creationTimestamp'] ?></span>
+                                <?php
+                                if (!is_null($oneLabelPostNature['updateTimestamp']) ){
+                                    ?> | <span class="badge badge-info">Updated in : <?= $oneLabelPostNature['updateTimestamp'] ?></span><?php
+                                }
+                                ?>
+                            </small>
                         </p>
                     </div>
                 </div>
@@ -53,12 +74,19 @@
         <div class="col-4">
             <a href="onePost.php?id=<?= $oneLabelPostSport['id'] ?>">
                 <div class="card h-100 position-relative">
-                    <img class="card-img img-fluid h-100" src="<?= $oneLabelPostSport['image'] ?>" alt="Card image">
+                    <div class="card-img img-fluid" style="background: url('admin/img/upload_img/<?= $oneLabelPostSport['image'] ?>') center no-repeat; background-size: cover;height: 300px;" alt="Card image"></div>
                     <span class="oneLabelPostLabel position-absolute">Sport</span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end m-3">
                         <p class="card-text">
                             <span class="card-text-title"><?= $oneLabelPostSport['title'] ?></span><br>
-                            <small class="small"><?= date('d-m-Y h:i:s a', strtotime($oneLabelPostSport['creationTimestamp'])); ?></small>
+                            <small class="small">
+                                <span class="badge badge-dark">Published in : <?= $oneLabelPostSport['creationTimestamp'] ?></span>
+                                <?php
+                                if (!is_null($oneLabelPostSport['updateTimestamp']) ){
+                                    ?> | <span class="badge badge-info">Updated in : <?= $oneLabelPostSport['updateTimestamp'] ?></span><?php
+                                }
+                                ?>
+                            </small>
                         </p>
                     </div>
                 </div>
@@ -67,13 +95,19 @@
         <div class="col-4">
             <a href="onePost.php?id=<?= $oneLabelPostTechnology['id'] ?>">
                 <div class="card h-100 position-relative">
-                    <img class="card-img img-fluid h-100" src="<?= $oneLabelPostTechnology['image'] ?>"
-                         alt="Card image">
+                    <div class="card-img img-fluid" style="background: url('admin/img/upload_img/<?= $oneLabelPostTechnology['image'] ?>') center no-repeat; background-size: cover;height: 300px;" alt="Card image"></div>
                     <span class="oneLabelPostLabel position-absolute">Technology</span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end m-3">
                         <p class="card-text">
                             <span class="card-text-title"><?= $oneLabelPostTechnology['title'] ?></span><br>
-                            <small class="small"><?= date('d-m-Y h:i:s a', strtotime($oneLabelPostTechnology['creationTimestamp'])); ?></small>
+                            <small class="small">
+                                <span class="badge badge-dark">Published in : <?= $oneLabelPostTechnology['creationTimestamp'] ?></span>
+                                <?php
+                                if (!is_null($oneLabelPostTechnology['updateTimestamp']) ){
+                                    ?> | <span class="badge badge-info">Updated in : <?= $oneLabelPostTechnology['updateTimestamp'] ?></span><?php
+                                }
+                                ?>
+                            </small>
                         </p>
                     </div>
                 </div>

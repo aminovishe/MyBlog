@@ -10,12 +10,12 @@ require_once 'cxBDD.php';
 if (isset($_GET['search'])) {
     $search = "%".$_GET['search']."%";
     $search2 = str_replace(" ","%",$search);
-    $stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.contents, post.creationTimestamp, post.image, user.firstName, user.lastName,category.name FROM post
+    $stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.contents, post.creationTimestamp,post.updateTimestamp, post.image, user.firstName, user.lastName,category.name FROM post
 INNER JOIN category ON post.category_Id=category.id
 INNER JOIN user ON post.author_Id=user.id
-where post.title like ? OR post.contents like ? OR post.image like ?
+where post.title like ? OR post.contents like ? OR post.image like ? OR category.name like ? and post.trashed=?
 ORDER BY post.creationTimestamp DESC");
-    $t=array($search2,$search2,$search2);
+    $t=array($search2,$search2,$search2,$search2,0);
     $stm->execute($t);
     $tabSearch = $stm->fetchAll(PDO::FETCH_ASSOC);
 } else {

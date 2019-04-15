@@ -8,7 +8,7 @@
 
 require_once 'cxBDD.php';
 
-$stm = $conn->prepare("SELECT * FROM post ORDER BY post.creationTimestamp DESC LIMIT 8");
+$stm = $conn->prepare("SELECT * FROM post where post.trashed=0 ORDER BY post.creationTimestamp DESC LIMIT 8");
 $stm->execute();
 $marqueeNews =$stm->fetchAll(PDO::FETCH_ASSOC);
 ?>

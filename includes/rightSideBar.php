@@ -1,4 +1,5 @@
 <?php require_once 'lib/c_rightSideBar.php'?>
+<?php require_once 'lib/c_popularPosts.php'?>
 <div class="col-4 right-side-bar">
     <div class="show-widget social-widget">
         <div class="div-title-widget">
@@ -22,30 +23,17 @@
             <p class="m-0 widget-title d-inline-block">POPULAR POSTS</p>
         </div>
         <div class="div-content-widget">
+            <?php foreach ($popularPosts as $key => $value) { ?>
             <div class="d-flex flex-row justify-content-center align-items-start mt-2">
                 <div class="w-35"
-                     style="background: url('https://static1.squarespace.com/static/5707c9364c2f85d0ea64d6ee/5713a9f6a3360cab667a8c15/5818642be6f2e10d0e6b7b4b/1497078449062/-JULA1609241200-LOCALFR1H-EverPhotoShoot-104_original.jpg') center no-repeat;height: 100px;background-size: cover"></div>
+                     style="background: url('admin/img/upload_img/<?= $value["image"] ?>') center no-repeat;height: 100px;background-size: cover"></div>
                 <div class="w-65 ml-2 text-left">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><span
-                                class="badge badge-dark">23/03/2019</span></span>
+                    <span><a href="onePost.php?id=<?= $value['id'] ?>"><?= $value["title"] ?></a><br><span
+                                class="badge badge-dark"><?= $value["creationTimestamp"] ?></span><br><small
+                                class="badge badge-success"><?= $value["nbrComments"] ?> comments</small></span>
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-center align-items-start mt-2">
-                <div class="w-35"
-                     style="background: url('https://www.zaniaclearning.com/static/zspa/img/membership.png') center no-repeat;height: 100px;background-size: cover"></div>
-                <div class="w-65 ml-2 text-left">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><span
-                                class="badge badge-dark">23/03/2019</span></span>
-                </div>
-            </div>
-            <div class="d-flex flex-row justify-content-center align-items-start mt-2">
-                <div class="w-35"
-                     style="background: url('https://www.rueducommerce.fr/medias/b0ada96b3a043fcb8fe6ba4d51918d91/p_580x580/carrera-20064104-01.jpg') center no-repeat;height: 100px;background-size: cover"></div>
-                <div class="w-65 ml-2 text-left">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><span
-                                class="badge badge-dark">23/03/2019</span></span>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
     <div class="show-widget follow-by-email-widget">
@@ -61,7 +49,7 @@
         <div class="div-content-widget">
             <div class="widget-content small-wid">
                 <div class="w-100" id="fb-root">
-                    <div class="fb-page" data-href="https://www.facebook.com/jaaw.chi5a.tn/"
+                    <div class="fb-page w-100" data-href="https://www.facebook.com/jaaw.chi5a.tn/"
                          data-tabs="timeline" data-height="180" data-small-header="false"
                          data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                         <blockquote cite="https://www.facebook.com/jaaw.chi5a.tn/"

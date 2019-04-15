@@ -11,14 +11,14 @@ function randomPosts($idLabel, $nbrPosts)
 {
     require 'cxBDD.php';
     if ($idLabel == -1) {
-        $stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.creationTimestamp, post.image, user.firstName, user.lastName FROM post
-INNER JOIN user ON post.author_Id=user.id ORDER BY RAND() LIMIT $nbrPosts");
+        $stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.creationTimestamp,post.updateTimestamp, post.image, user.firstName, user.lastName FROM post
+INNER JOIN user ON post.author_Id=user.id where post.trashed=0 ORDER BY RAND() LIMIT $nbrPosts");
         $stm->execute();
         $TabRandPosts = $stm->fetchAll(PDO::FETCH_ASSOC);
         return $TabRandPosts;
     } else {
-        $stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.creationTimestamp, post.image, user.firstName, user.lastName FROM post
-INNER JOIN user ON post.author_Id=user.id where post.category_Id = $idLabel ORDER BY RAND() LIMIT $nbrPosts");
+        $stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.creationTimestamp,post.updateTimestamp, post.image, user.firstName, user.lastName FROM post
+INNER JOIN user ON post.author_Id=user.id where post.category_Id = $idLabel and post.trashed=0 ORDER BY RAND() LIMIT $nbrPosts");
         $stm->execute();
         $TabRandPosts = $stm->fetchAll(PDO::FETCH_ASSOC);
         return $TabRandPosts;

@@ -14,7 +14,7 @@
                 <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item mr-2">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="contact.php">Contact</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" method="get" action="search.php">

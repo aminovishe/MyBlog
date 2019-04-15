@@ -9,16 +9,16 @@
 require_once 'cxBDD.php';
 $idPost = $_GET['id'];
 
-$stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.contents,post.creationTimestamp, post.image, user.firstName, user.lastName, category.name, post.category_Id FROM post
+$stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.contents,post.creationTimestamp,post.updateTimestamp, post.image, user.firstName, user.lastName, category.name, post.category_Id FROM post
 INNER JOIN user ON post.author_Id=user.id
 INNER JOIN category ON post.category_Id = category.id
-WHERE post.id = $idPost");
+WHERE post.id = $idPost and post.trashed=0");
 $stm->execute();
 $tabOnePost = $stm->fetch(PDO::FETCH_ASSOC);
 
 $tabRelatedPosts = randomPosts($tabOnePost['category_Id'], 2);
 
-$stm = $conn->prepare("SELECT post.id FROM post order by post.id asc");
+$stm = $conn->prepare("SELECT post.id FROM post where post.trashed=0 order by post.id asc");
 $stm->execute();
 $tabNextPreviousPost = $stm->fetchAll(PDO::FETCH_ASSOC);
 

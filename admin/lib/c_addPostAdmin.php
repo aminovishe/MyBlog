@@ -6,12 +6,17 @@
  * Time: 12:21 AM
  */
 
-require_once '../../lib/cxBDD.php';
-
+require_once '../lib/cxBDD.php';
+$img=$_FILES["image"]["name"];
+$radom_img=time().$img;
+move_uploaded_file($_FILES["image"]["tmp_name"], "../img/upload_img/".$radom_img);
 $stm = $conn->prepare("INSERT INTO `post`(`title`, `highlight`, `contents`, `author_Id`, `category_Id`, `image`)
 VALUES (?,?,?,?,?,?)");
-$t=array($_POST['title'],$_POST['highlight'],$_POST['contents'],$_POST['author'],$_POST['category'],$_POST['image']);
+$t=array($_POST['title'],$_POST['highlight'],$_POST['contents'],$_POST['author'],$_POST['category'],$radom_img);
 $stm->execute($t);
 
-header('Location: ../admin.php');
+$stm = $conn->prepare("SELECT post.id FROM `post` ORDER BY post.id DESC LIMIT 1");
+$stm->execute();
+$lastPost = $stm->fetch(PDO::FETCH_ASSOC);
+header('Location: ../../onePost.php?id='.$lastPost['id']);
 ?>

@@ -1,3 +1,8 @@
+<?php
+if(isset($_GET['demand'])){
+    $demand="We thank you<br>We will contact you as soon as possible";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +32,9 @@
 <div class="container big-div mt-3 mb-3">
     <?php require_once 'includes/navbar.php' ?>
     <?php require_once 'includes/marqueeNews.php' ?>
+    <?php if(isset($_GET['demand'])){ ?>
+        <h3 class="text-center"><span class="badge badge-success text-center"><?=$demand?></span></h3>
+    <?php } ?>
     <?php require_once 'includes/oneLabelPost.php' ?>
     <div class="row row-posts-widgets">
         <?php require_once 'includes/showLabelsPosts.php' ?>

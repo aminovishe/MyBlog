@@ -12,12 +12,18 @@
                 <div class="row">
                     <?php foreach ($randomPosts as $key => $value) { ?>
                         <div class="col-4">
-                            <img class="w-100" height="200" src="<?= $value['image'] ?>" alt="">
+                            <div class="w-100 image"
+                                 style="background: url('admin/img/upload_img/<?= $value["image"] ?>') center no-repeat;height: 250px;background-size: cover"></div>
                             <a href="onePost.php?id=<?= $value['id'] ?>"><h4><?= $value['title'] ?></h4></a>
-                            <p><strong><?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong> - <span
-                                        class="badge badge-dark"><?= date('d-m-Y h:i:s a', strtotime($value['creationTimestamp'])); ?></span>
+                            <p><strong>Published by : <?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong><br>
+                                <span class="badge badge-dark">Published in : <?= $value['creationTimestamp'] ?></span>
+                                <?php
+                                if (!is_null($value['updateTimestamp']) ){
+                                    ?> <span class="badge badge-info">Updated in : <?= $value['updateTimestamp'] ?></span><?php
+                                }
+                                ?>
                             </p>
-                            <p class="text-justify"><?= $value['highlight'] ?></p>
+                            <!-- <p class="text-justify">--><?//= $value['highlight'] ?><!--</p>-->
                         </div>
                     <?php } ?>
                 </div>
