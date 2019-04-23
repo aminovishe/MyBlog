@@ -6,6 +6,10 @@
  * Time: 12:16 AM
  */
 
+if (!isset($_SESSION['connect'])){
+    header('Location: 404.phtml');
+}
+
 require_once 'lib/cxBDD.php';
 
 $stm = $conn->prepare("SELECT post.id FROM post WHERE post.category_Id=1");

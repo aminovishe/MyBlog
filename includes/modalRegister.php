@@ -32,8 +32,8 @@
                     </div>
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="terms" required> I agree to the <a style="color: #FFC107!important;" href="#">Terms
-                                of Use</a> & <a style="color: #FFC107!important;" href="#">Privacy Policy</a>
+                            <input type="checkbox" name="terms" required> I agree to the <a style="color: #FFC107!important;" href="termsOfUsePrivacyPolicy.php">Terms
+                                of Use</a> & <a style="color: #FFC107!important;" href="termsOfUsePrivacyPolicy.php">Privacy Policy</a>
                         </label>
                     </div>
                 </div>

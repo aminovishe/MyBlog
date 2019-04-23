@@ -1,3 +1,6 @@
+[alt="www.000webhost.com"]{
+    display:none;
+}
 * {
     box-sizing: border-box;
     font-family: 'ZCOOL XiaoWei', serif;
@@ -51,19 +54,12 @@ body {
 }
 
 .navbar {
-    background-color: #191F3C;
     border-top: 3px solid #721c24;
     border-bottom: 3px solid #721c24;
 }
-
-.navbar a {
-    color: white;
-    transition: all 0.8s;
-}
-
-.navbar a:hover {
-    transform: scale(1.3);
-    color: white;
+.navbar li a{
+    font-weight: bold;
+    color: black !important;
 }
 
 .marquee-row {
@@ -675,4 +671,14 @@ marquee img {
 }
 .divContact .modal-lg .modal-footer{
     background-image: linear-gradient(to left top, #1d1e21, #272128, #362226, #3e271d, #393115);
+}
+
+/* pagination */
+
+.pagination li a {
+    color: black;
+}
+.pagination li a:hover {
+    background-color: #FFC107!important;
+    color: whitesmoke;
 }

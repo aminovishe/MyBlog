@@ -5,6 +5,10 @@
  * Date: 14/04/2019
  * Time: 9:18 PM
  */
+session_start();
+if (!isset($_SESSION['connect'])){
+    header('Location: 404.phtml');
+}
 
 require_once 'cxBDD.php'; //done//
 

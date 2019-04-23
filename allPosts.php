@@ -1,3 +1,4 @@
+<?php if (!isset($_GET['page'])) { header('Location: 404.phtml'); } ?>
 <!DOCTYPE html>
 <html>
 <head>

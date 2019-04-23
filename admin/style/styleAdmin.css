@@ -1,3 +1,7 @@
+[alt="www.000webhost.com"] {
+    display: none;
+}
+
 .sidebar-menu .header {
     font-weight: bold;
     text-align: center;
@@ -7,48 +11,127 @@
     color: #00A65A !important;
 }
 
-.w-10{
+.w-10 {
     width: 5% !important;
 }
 
-.w-90{
+.w-90 {
     width: 95% !important;
 }
-.verticalWordTextarea{
+
+.verticalWordTextarea {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
 }
-.verticalWord{
+
+.verticalWord {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.verticalWord{
+
+.verticalWord {
     text-orientation: upright;
     writing-mode: vertical-rl;
     font-weight: bold;
     color: white;
 }
-.highlightEditor{
+
+.highlightEditor {
     border: 2px solid #3C8DBC;
 }
-.contentEditor{
+
+.contentEditor {
     border: 2px solid #2B3B92;
 }
-.bg-purple{
+
+.bg-purple {
     background-color: #DFA8E4 !important;
 }
-.bg-dark{
+
+.bg-dark {
     background-color: #222D32 !important;
 }
-.showOnePostAdmin{
+
+.showOnePostAdmin {
     margin: 10px 15px;
 }
+
 .separation-posts {
     border: 1px solid #2B3B92;
     width: 80%;
     margin: auto;
+}
+
+/* login */
+.login-page .container-fluid {
+    background: url('../img/bg-login.jpg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+"
+}
+
+.login-page .big-login {
+    background-image: linear-gradient(to right top, rgba(244, 124, 31, 0.5), rgba(255, 107, 97, 0.5), rgba(255, 109, 153, 0.5), rgba(234, 126, 199, 0.5), rgba(191, 147, 227, 0.5), rgba(161, 164, 243, 0.5), rgba(130, 179, 250, 0.5), rgba(105, 191, 248, 0.5), rgba(82, 207, 254, 0.5), rgba(65, 223, 255, 0.5), rgba(70, 238, 250, 0.5), rgba(95, 251, 241, 0.5));
+}
+
+.big-login .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-col > div {
+    width: 50%;
+    margin: auto;
+}
+
+.login-col > div .login-box-body {
+    border-radius: 12px;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 0px -30px rgba(0, 0, 0, 0.46);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 0px -30px rgba(0, 0, 0, 0.46);
+}
+
+/* profile user */
+.profileUser .userPhotoName {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.profileUser .userPhotoName * {
+    font-family: 'ZCOOL XiaoWei', serif;;
+    margin-left: 30px;
+}
+
+.profileUser .userPhoto {
+    width: 150px;
+    height: 150px;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 0px -30px rgba(0, 0, 0, 0.46);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 0px -30px rgba(0, 0, 0, 0.46);
+}
+
+.coordUser table{
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+}
+.coordUser table th, .coordUser table td{
+    width: 33%;
+    font-size: 20px;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #9F3E4A ;
+}
+.coordUser table th{
+
+    color: #3a83b0;
+}
+.coordUser table td .btn{
+    margin-left: 30px;
 }

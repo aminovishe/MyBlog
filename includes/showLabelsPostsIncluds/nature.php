@@ -8,7 +8,7 @@
             <?php foreach ($showLabelsPostsNature as $key => $value) { ?>
                 <div class="col-4">
                     <div class="w-100 image"
-                         style="background: url('admin/img/upload_img/<?= $value["image"] ?>') center no-repeat;height: 250px;background-size: cover"></div>
+                         style="background: url('admin/img/upload_img/<?= $value["image"] ?>') center no-repeat;height: 200px;background-size: cover"></div>
                     <a href="onePost.php?id=<?= $value['id'] ?>"><h4><?= $value['title'] ?></h4></a>
                     <p><strong><?php echo $value['firstName'] . ' ' . $value['lastName']; ?></strong><br>
                         <small class="small">

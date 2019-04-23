@@ -1,9 +1,16 @@
+<?php session_start();
+if (!isset($_SESSION['connect'])){
+    header('Location: 404.phtml');
+}
+?>
 <?php require_once 'lib/c_dashboard.php'?>
-<?php require_once 'lib/c_nbrCommentsContacts.php' ?>
+<?php require_once 'lib/c_nbrComContDemUsers.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Admin - AmiBlog</title>
     <meta charset="utf-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta name="author" content="Mohamed Amin Hadrich">
     <meta name="description" content="this is a advance cms system developed with udemy">
     <link rel="shortcut icon" href="../pics/logo.ico" type="image/x-icon">
@@ -11,7 +18,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|ZCOOL+XiaoWei" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- jQuery-->
+    <script src="js/jQuery-2.1.3.min.js"></script>
     <!-- Bootstrap 3.3.2 -->
     <link href="style/bootstrap.css" rel="stylesheet" type="text/css"/>
     <!-- Font Awesome Icons -->
@@ -21,11 +29,10 @@
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
     <!-- Theme style -->
     <link href="style/AdminLTE.css" rel="stylesheet" type="text/css"/>
-    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link href="style/skin-blue.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="style/styleAdmin.css">
-
 
     <!--Start Text editor-->
     <!--    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>-->
@@ -39,7 +46,7 @@
 
     <header class="main-header">
         <a href="admin.php" class="logo"><img style="height: 40px; " src="img/logo_admin.png"
-                                                                 alt=""></a>
+                                              alt=""></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -54,25 +61,25 @@
                     </li>
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="img/amin.jpg" class="user-image" alt="User Image"/>
-                            <span class="hidden-xs">Amin HADRICH</span>
+                            <img src="img/user_img/<?=$_SESSION['image']?>" class="user-image" alt="User Image"/>
+                            <span class="hidden-xs"><?php echo $_SESSION['firstName'].' '.$_SESSION['lastName']; ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="img/amin.jpg" class="img-circle" alt="User Image"/>
+                                <img src="img/user_img/<?=$_SESSION['image']?>" class="img-circle" alt="User Image"/>
                                 <p>
-                                    Amin HADRICH - Web Developer
-                                    <small>Co-founder of <b>AmiBlog</b></small>
+                                    <?php echo $_SESSION['firstName'].' '.$_SESSION['lastName']; ?>
+                                    <small><b><?php echo $_SESSION['admin'] == 1 ? "Administrator" : "Author"; ?></b></small>
                                 </p>
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="userProfile.php?id=<?= $_SESSION['id'] ?>" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="lib/c_logout.php" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -91,10 +98,10 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="img/amin.jpg" class="img-circle" alt="User Image"/>
+                    <img src="img/user_img/<?=$_SESSION['image']?>" class="img-circle" alt="User Image"/>
                 </div>
                 <div class="pull-left info">
-                    <p>Amin HADRICH</p>
+                    <p><?php echo $_SESSION['firstName'].' '.$_SESSION['lastName']; ?></p>
 
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
@@ -118,22 +125,30 @@
                 </li>
                 <li>
                     <a href="showComments.php">
-                        <i class="fas fa-eraser"></i> <span>Manage comments</span>
+                        <i class="fas fa-eraser"></i> <span>&nbsp;&nbsp;Manage comments</span>
                         <small class="label pull-right bg-green"><?=$numberComments['nbrComments']?></small>
                     </a>
                 </li>
                 <li>
                     <a href="showContactMessageAdmin.php">
-                        <i class="fa fa-th"></i> <span>Visitor's message</span>
+                        <i class="fa fa-th"></i> <span>&nbsp;&nbsp;Visitor's message</span>
                         <small class="label pull-right bg-green"><?=$numberContact['nbrContact']?></small>
                     </a>
                 </li>
+                <?php if ($_SESSION['admin']==1) { ?>
                 <li>
-                    <a href="#">
-                        <i class="fas fa-users"></i> <span>User's profile</span>
-                        <small class="label pull-right bg-green">5</small>
+                    <a href="showDemandRegister.php">
+                        <i class="far fa-plus-square"></i> <span>&nbsp;&nbsp;Visitor's demand</span>
+                        <small class="label pull-right bg-green"><?= $numberDemande['nbrDemand'] ?></small>
                     </a>
                 </li>
+                <li>
+                    <a href="showUsersProfile.php">
+                        <i class="fas fa-users"></i> <span>&nbsp;&nbsp;User's profile</span>
+                        <small class="label pull-right bg-green"><?= $numberUser['nbrUser'] ?></small>
+                    </a>
+                </li>
+                <?php } ?>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -258,7 +273,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 1.0
         </div>
-        <strong>Copyright &copy; 2019 <a href="http://almsaeedstudio.com">Amin HADRICH</a>.</strong> All rights
+        <strong>Copyright &copy; 2019 <a href="https://www.linkedin.com/in/hadrich-mohamedamin/">Amin HADRICH</a>.</strong> All rights
         reserved.
     </footer>
 </div><!-- ./wrapper -->

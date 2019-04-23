@@ -76,10 +76,7 @@
         </div>
     </div>
     <div class="mt-3 mb-3 between-highlight-content p-2">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <div><i class="fas fa-share-alt"></i> Share this post</div>
-        </div>
-        <div class="elfsight-app-c350939c-9420-4fdf-86ad-04af6d3615ec"></div>
+        <div class="sharethis-inline-share-buttons"></div>
     </div>
     <div class="divAddComment m-5 row">
         <div class="inputComment w-100">

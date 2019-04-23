@@ -2,7 +2,7 @@
     <div class="div-title-widget d-flex flex-row justify-content-between align-items-center">
         <p class="m-0 widget-title d-inline-block">Contact the AmiBlog Team</p>
     </div>
-    <?php if(isset($_GET['error'])){ ?>
+    <?php if(isset($error)){ ?>
         <span class="badge badge-danger text-left"><?=$error?></span>
     <?php } ?>
     <div class="div-content-widget row d-flex flex-column justify-content-start align-items-start mt-3 mb-3">

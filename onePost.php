@@ -7,6 +7,13 @@ require_once 'lib/c_showComment.php';
 <html>
 <head>
     <meta charset="utf-8">
+    <meta property="og:url"
+          content="http://www.amiblog.tk/onePost.php?id=<?=$tabOnePost['id']?>"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="<?=$tabOnePost['title']?>"/>
+    <meta property="og:description" content="<?=$tabOnePost['highlight']?>"/>
+    <meta property="og:image"
+          content="www.amiblog.tk/admin/img/upload_img/<?=$tabOnePost['image']?>"/>
     <meta name="author" content="Mohamed Amin Hadrich">
     <meta name="description" content="this is a advance cms system developed with udemy">
     <link rel="shortcut icon" href="pics/logo.ico" type="image/x-icon">
@@ -24,6 +31,9 @@ require_once 'lib/c_showComment.php';
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script type='text/javascript'
+            src='//platform-api.sharethis.com/js/sharethis.js#property=5cb717373e2c72001277ead0&product=social-ab'
+            async='async'></script>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>

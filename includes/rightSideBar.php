@@ -68,31 +68,31 @@
         <div class="div-content-widget">
             <div class="widget-content">
                 <ul class="list-group">
-                    <a href="allPosts.php?idLabel=1">
+                    <a href="allPosts.php?idLabel=1&page=0">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Business
                             <span class="badge badge-dark badge-pill"><?=$numberPostsBusiness?></span>
                         </li>
                     </a>
-                    <a href="allPosts.php?idLabel=2">
+                    <a href="allPosts.php?idLabel=2&page=0">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Music
                             <span class="badge badge-dark badge-pill"><?=$numberPostsMusic?></span>
                         </li>
                     </a>
-                    <a href="allPosts.php?idLabel=3">
+                    <a href="allPosts.php?idLabel=3&page=0">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Nature
                             <span class="badge badge-dark badge-pill"><?=$numberPostsNature?></span>
                         </li>
                     </a>
-                    <a href="allPosts.php?idLabel=4">
+                    <a href="allPosts.php?idLabel=4&page=0">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Sport
                             <span class="badge badge-dark badge-pill"><?=$numberPostsSport?></span>
                         </li>
                     </a>
-                    <a href="allPosts.php?idLabel=5">
+                    <a href="allPosts.php?idLabel=5&page=0">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Technology
                             <span class="badge badge-dark badge-pill"><?=$numberPostsTechnology?></span>

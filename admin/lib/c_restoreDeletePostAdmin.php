@@ -6,6 +6,10 @@
  * Time: 12:35 AM
  */
 
+if (!isset($_SESSION['connect'])){
+    header('Location: 404.phtml');
+}
+
 require_once 'lib/cxBDD.php'; //done//
 
 $stm = $conn->prepare("SELECT post.id, post.title, post.highlight, post.contents, post.creationTimestamp,post.updateTimestamp, post.image, user.firstName, user.lastName,category.name FROM post

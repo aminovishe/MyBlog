@@ -260,7 +260,7 @@ a:focus {
   font-family: fontAwesome;
 }
 .main-header .sidebar-toggle:before {
-  content: "\f004";
+  content: "\f0c9";
 }
 .main-header .sidebar-toggle:hover {
   color: #fff;
@@ -2740,14 +2740,11 @@ table.text-center th {
 .register-logo a {
   color: #444;
 }
-.login-page,
-.register-page {
-  background: #d2d6de;
-}
 .login-box,
 .register-box {
   width: 360px;
   margin: 7% auto;
+
 }
 @media (max-width: 768px) {
   .login-box,

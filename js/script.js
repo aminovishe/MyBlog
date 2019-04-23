@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     var btn = $('#btn-to-top');
     $(window).scroll(function () {
         if ($(window).scrollTop() > 300) {
@@ -79,7 +80,6 @@ $(document).ready(function () {
 
 
 });
-
 
 /*
 $(function () {

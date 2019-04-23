@@ -6,6 +6,10 @@
  * Time: 12:13 PM
  */
 
+if (!isset($_SESSION['connect'])){
+    header('Location: 404.phtml');
+}
+
 require_once 'lib/cxBDD.php'; //done//
 
 $idPost = $_GET['id'];

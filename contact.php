@@ -1,7 +1,10 @@
 <?php
-    if(isset($_GET['error'])){
-        $error="An error has been detected while trying to contact us !!!<br>Please try again";
-    }
+if (isset($_GET['error'])) {
+    $error = "An error has been detected while trying to contact us !!!<br>Please try again";
+}
+if (isset($_GET['errormail'])) {
+    $error = "You are already a member.<br>please contact us for more information";
+}
 ?>
 <!DOCTYPE html>
 <html>

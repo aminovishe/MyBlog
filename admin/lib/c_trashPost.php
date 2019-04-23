@@ -6,6 +6,11 @@
  * Time: 12:06 AM
  */
 
+session_start();
+if (!isset($_SESSION['connect'])){
+    header('Location: 404.phtml');
+}
+
 require_once 'cxBDD.php'; //done//
 
 $stm = $conn->prepare("UPDATE `post` SET `trashed`=? WHERE post.id=?");

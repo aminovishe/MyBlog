@@ -5,6 +5,10 @@
  * Date: 13/04/2019
  * Time: 1:37 PM
  */
+session_start();
+if (!isset($_SESSION['connect'])){
+    header('Location: 404.phtml');
+}
 
 require_once 'cxBDD.php'; //done//
 if (isset($_POST['changeImage']) && $_POST['changeImage']=="Yes"){
